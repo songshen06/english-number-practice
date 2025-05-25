@@ -1,0 +1,183 @@
+/* ... (保留之前的样式) ... */
+
+.mode-selection {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mode-selection label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.mode-btn {
+  background-color: #95a5a6; /* Inactive color */
+  padding: 14px 22px;
+  font-size: 1.3em;
+}
+
+.mode-btn.active {
+  background-color: #3498db; /* Active color */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
+.mode-btn:not(.active):hover {
+  background-color: #7f8c8d;
+}
+
+#input-row {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+#input-row > * {
+  margin: 0;
+}
+#input-container {
+  display: none !important;
+}
+#playSoundBtn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.3em;
+  padding: 12px 20px;
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#playSoundBtn:hover {
+  background-color: #6c3483;
+}
+#nextQuestionBtn {
+  font-size: 1.2em;
+  padding: 12px 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#nextQuestionBtn:hover {
+  background-color: #219150;
+}
+
+#numberInput {
+  padding: 16px;
+  font-size: 2em;
+  width: 140px;
+  text-align: center;
+  border: 2px solid #bdc3c7;
+  border-radius: 5px;
+  box-sizing: border-box; /* Important for consistent sizing */
+}
+
+/* Optional: Hide number input arrows for a cleaner look for kids */
+#numberInput::-webkit-outer-spin-button,
+#numberInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#numberInput[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+#checkAnswerBtn {
+  background-color: #1abc9c;
+  padding: 16px 32px;
+  font-size: 1.5em;
+}
+
+#checkAnswerBtn:hover {
+  background-color: #16a085;
+}
+
+.option-btn {
+  font-size: 2em;
+  padding: 18px 32px;
+  margin: 8px;
+}
+
+#feedback {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+#instruction {
+  font-size: 1.5em;
+  margin: 18px 0;
+}
+
+.score-board {
+  font-size: 1.3em;
+}
+
+.range-selection {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.range-selection label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.range-btn {
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2em;
+  padding: 10px 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.range-btn.active,
+.range-btn:hover {
+  background-color: #e67e22;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 8px;
+  }
+  .mode-selection,
+  .range-selection,
+  #input-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .mode-btn,
+  .range-btn,
+  #playSoundBtn,
+  #checkAnswerBtn,
+  #nextQuestionBtn {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 14px 0;
+  }
+  #numberInput {
+    width: 100%;
+    font-size: 1.5em;
+    padding: 14px;
+  }
+  .option-btn {
+    width: 100%;
+    font-size: 1.5em;
+    padding: 16px 0;
+    margin: 6px 0;
+  }
+}
