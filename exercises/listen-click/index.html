@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>听音辨数（选择题）</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>听音辨数（选择题）</h1>
+      <button id="backToHome">返回门户</button>
+      <div class="range-selection">
+        <label>选择数字范围:</label>
+        <button class="range-btn" data-min="1" data-max="10">1-10</button>
+        <button class="range-btn" data-min="11" data-max="20">11-20</button>
+        <button class="range-btn" data-min="21" data-max="30">21-30</button>
+        <button class="range-btn" data-min="31" data-max="40">31-40</button>
+        <button class="range-btn" data-min="41" data-max="50">41-50</button>
+        <button class="range-btn" data-min="51" data-max="60">51-60</button>
+        <button class="range-btn" data-min="61" data-max="70">61-70</button>
+        <button class="range-btn" data-min="71" data-max="80">71-80</button>
+        <button class="range-btn" data-min="81" data-max="90">81-90</button>
+        <button class="range-btn" data-min="91" data-max="100">91-100</button>
+      </div>
+      <button id="playSoundBtn">播放声音</button>
+      <div id="options-container"></div>
+      <p id="feedback"></p>
+      <button id="nextQuestionBtn" style="display: none">下一题</button>
+      <div class="score-board">
+        <p>得分: <span id="score">0</span></p>
+        <p>
+          已练习: <span id="questionsAttempted">0</span> /
+          <span id="totalQuestions">10</span>
+        </p>
+      </div>
+      <audio id="numberAudio"></audio>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

@@ -3,63 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>英语数字练习 (1-100)</title>
+    <title>英语数字练习门户</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>英语数字练习 (1-100)</h1>
-
-      <div class="mode-selection">
-        <label>选择练习模式:</label>
-        <button id="modeListenClick" class="mode-btn active">听音辨数</button>
-        <button id="modeListenType" class="mode-btn">听音写数</button>
-      </div>
-
-      <div class="range-selection">
-        <label>选择数字范围:</label>
-        <button class="range-btn" data-min="1" data-max="10">1-10</button>
-        <button class="range-btn" data-min="11" data-max="20">11-20</button>
-        <button class="range-btn" data-min="21" data-max="30">21-30</button>
-        <button class="range-btn" data-min="31" data-max="40">31-40</button>
-        <button class="range-btn" data-min="41" data-max="50">41-50</button>
-        <button class="range-btn" data-min="51" data-max="60">51-60</button>
-        <button class="range-btn" data-min="61" data-max="70">61-70</button>
-        <button class="range-btn" data-min="71" data-max="80">71-80</button>
-        <button class="range-btn" data-min="81" data-max="90">81-90</button>
-        <button class="range-btn" data-min="91" data-max="100">91-100</button>
-      </div>
-
-      <p id="instruction">请选择一个模式开始练习。</p>
-
-      <!-- 听音辨数 (选择题) 的容器 -->
-      <div id="options-container" style="display: none">
-        <!-- 数字选项按钮将由 JavaScript 动态生成 -->
-      </div>
-
-      <!-- 听音写数 (输入题) 的容器 -->
-      <div id="input-row" style="display: none">
-        <button id="playSoundBtn" style="display: none">
-          播放声音 <span class="speaker-icon">🔊</span>
-        </button>
-        <input type="number" id="numberInput" placeholder="输入数字" />
-        <button id="checkAnswerBtn">检查答案</button>
-        <button id="nextQuestionBtn" style="display: none">下一个问题</button>
-      </div>
-
-      <p id="feedback"></p>
-
-      <div class="score-board">
-        <p>得分: <span id="score">0</span></p>
-        <p>
-          已练习: <span id="questionsAttempted">0</span> /
-          <span id="totalQuestions">10</span>
-        </p>
-      </div>
+      <h1>英语数字练习门户</h1>
+      <ul>
+        <li>
+          <a href="exercises/listen-click/index.html">听音辨数（选择题）</a>
+        </li>
+        <li>
+          <a href="exercises/listen-type/index.html">听音写数（输入题）</a>
+        </li>
+        <!-- 未来可扩展更多练习 -->
+      </ul>
     </div>
-
-    <audio id="numberAudio"></audio>
-
-    <script src="script.js"></script>
   </body>
 </html>
