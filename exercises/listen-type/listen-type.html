@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>听音辨数（选择题）</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>听音写数（输入题）</title>
+    <link rel="stylesheet" href="listen-type.css" />
   </head>
   <body>
     <div class="container">
-      <h1>听音辨数（选择题）</h1>
+      <h1>听音写数（输入题）</h1>
       <button id="backToHome">返回门户</button>
       <div class="range-selection">
         <label>选择数字范围:</label>
@@ -23,10 +23,12 @@
         <button class="range-btn" data-min="81" data-max="90">81-90</button>
         <button class="range-btn" data-min="91" data-max="100">91-100</button>
       </div>
-      <button id="playSoundBtn">播放声音</button>
-      <div id="options-container"></div>
+      <div id="input-row">
+        <button id="playSoundBtn">播放声音</button>
+        <input type="number" id="numberInput" placeholder="输入数字" />
+        <button id="checkAnswerBtn">检查答案</button>
+      </div>
       <p id="feedback"></p>
-      <button id="nextQuestionBtn" style="display: none">下一题</button>
       <div class="score-board">
         <p>得分: <span id="score">0</span></p>
         <p>
@@ -36,6 +38,6 @@
       </div>
       <audio id="numberAudio"></audio>
     </div>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="listen-type.js"></script>
   </body>
 </html>
