@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>词汇分类</title>
+    <link rel="stylesheet" href="category-choice.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>词汇分类</h1>
+      <div id="question-area">
+        <div style="margin-bottom: 8px">
+          <button
+            id="show-category-btn"
+            class="option-btn"
+            style="font-size: 0.95em; padding: 6px 18px; margin-bottom: 6px"
+          >
+            显示类别提示
+          </button>
+        </div>
+        <div id="category-label" style="display: none"></div>
+        <div id="stem"></div>
+        <div id="options"></div>
+        <div id="feedback"></div>
+        <button id="next-btn" style="display: none">下一题</button>
+      </div>
+      <div id="progress"></div>
+    </div>
+    <script type="module" src="category-choice.js"></script>
+  </body>
+</html>
