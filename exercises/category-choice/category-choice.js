@@ -176,6 +176,7 @@ function renderQuestion() {
     const btn = document.createElement("button");
     btn.className = "option-btn";
     btn.textContent = String.fromCharCode(65 + i) + ". " + q.options[optIdx];
+    btn.dataset.idx = optIdx; // 记录原始下标
     btn.onclick = () => checkAnswer(optIdx, btn, i);
     optionsDiv.appendChild(btn);
   });
@@ -211,13 +212,12 @@ function checkAnswer(selectedIdx, btn, shownIdx) {
   const qIdx = questionOrder[current];
   const q = questions[qIdx];
   // 找到当前正确答案在乱序后的下标
-  const correctOptIdx = optionOrder.indexOf(q.answer);
   const optionBtns = document.querySelectorAll(".option-btn");
-  optionBtns.forEach((b, i) => {
+  optionBtns.forEach((b) => {
     b.disabled = true;
-    if (i === correctOptIdx) b.classList.add("correct");
-    if (i === optionOrder.indexOf(selectedIdx) && i !== correctOptIdx)
-      b.classList.add("wrong");
+    const btnIdx = Number(b.dataset.idx);
+    if (btnIdx === q.answer) b.classList.add("correct");
+    if (btnIdx === selectedIdx && btnIdx !== q.answer) b.classList.add("wrong");
   });
   const isCorrect = selectedIdx === q.answer;
   // 记录本题
@@ -228,7 +228,7 @@ function checkAnswer(selectedIdx, btn, shownIdx) {
     correctAnswer: q.options[q.answer],
     userAnswer: q.options[selectedIdx],
     userAnswerLabel: String.fromCharCode(65 + shownIdx),
-    correctAnswerLabel: String.fromCharCode(65 + correctOptIdx),
+    correctAnswerLabel: String.fromCharCode(65 + q.answer),
   });
   if (isCorrect) {
     document.getElementById("feedback").innerHTML =
@@ -236,7 +236,7 @@ function checkAnswer(selectedIdx, btn, shownIdx) {
   } else {
     document.getElementById("feedback").innerHTML =
       "<span class='wrong'>❌ 答错了。</span> 正确答案是 " +
-      String.fromCharCode(65 + correctOptIdx) +
+      String.fromCharCode(65 + q.answer) +
       `：${q.options[q.answer]}。<br>` +
       q.explanation;
   }
