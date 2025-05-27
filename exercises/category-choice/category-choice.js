@@ -162,7 +162,6 @@ function renderQuestion() {
   updateProgressCounter();
   // 隐藏类别提示
   document.getElementById("category-label").style.display = "none";
-  document.getElementById("show-category-btn").style.display = "inline-block";
   const qIdx = questionOrder[current];
   const q = questions[qIdx];
   document.getElementById("category-label").textContent = q.category;
@@ -183,6 +182,29 @@ function renderQuestion() {
   document.getElementById("progress").textContent = `第 ${
     current + 1
   } / ${TOTAL_QUESTIONS} 题`;
+
+  // --- 修复显示类别提示按钮 ---
+  const showCategoryBtn = document.getElementById("show-category-btn");
+  if (showCategoryBtn) {
+    showCategoryBtn.style.display = "inline-block";
+    showCategoryBtn.disabled = false;
+    // 先移除所有旧事件（通过设置 onclick 为 null）
+    showCategoryBtn.onclick = null;
+    showCategoryBtn.onclick = function () {
+      document.getElementById("category-label").style.display = "block";
+      showCategoryBtn.style.display = "none";
+    };
+  }
+
+  // --- 返回首页按钮同理 ---
+  const backBtn = document.getElementById("back-to-home-btn");
+  if (backBtn) {
+    backBtn.disabled = false;
+    backBtn.onclick = null;
+    backBtn.onclick = function () {
+      window.location.href = "../../index.html";
+    };
+  }
 }
 
 function checkAnswer(selectedIdx, btn, shownIdx) {
@@ -269,23 +291,6 @@ document.getElementById("next-btn").onclick = function () {
   current++;
   renderQuestion();
 };
-
-// 显示类别提示按钮逻辑
-const showCategoryBtn = document.getElementById("show-category-btn");
-if (showCategoryBtn) {
-  showCategoryBtn.onclick = function () {
-    document.getElementById("category-label").style.display = "block";
-    showCategoryBtn.style.display = "none";
-  };
-}
-
-// 只在初始渲染时绑定返回首页按钮事件
-const backBtn = document.getElementById("back-to-home-btn");
-if (backBtn) {
-  backBtn.onclick = function () {
-    window.location.href = "../../index.html";
-  };
-}
 
 // 初始渲染
 renderQuestion();
