@@ -221,7 +221,8 @@ function checkAnswer(selectedIdx, btn, shownIdx) {
   if (current < TOTAL_QUESTIONS - 1) {
     document.getElementById("next-btn").style.display = "inline-block";
   } else {
-    // 最后一题，显示下载按钮
+    // 最后一题，显示下载按钮和返回首页，计数器也要更新
+    current++;
     updateProgressCounter();
     showDownloadBtn();
   }
@@ -275,6 +276,14 @@ if (showCategoryBtn) {
   showCategoryBtn.onclick = function () {
     document.getElementById("category-label").style.display = "block";
     showCategoryBtn.style.display = "none";
+  };
+}
+
+// 只在初始渲染时绑定返回首页按钮事件
+const backBtn = document.getElementById("back-to-home-btn");
+if (backBtn) {
+  backBtn.onclick = function () {
+    window.location.href = "../../index.html";
   };
 }
 
