@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>句子排序练习</title>
+    <link rel="stylesheet" href="sentence_scramble.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>句子排序练习</h1>
+      <button id="backToHome">返回门户</button>
+
+      <div class="exercise-selection">
+        <label>选择练习类型:</label>
+        <button class="exercise-btn" data-type="family_present">
+          介绍家人 (现在时)
+        </button>
+        <button class="exercise-btn" data-type="past_state">
+          谈论过去的状态
+        </button>
+        <button class="exercise-btn" data-type="past_actions">
+          谈论过去的动作
+        </button>
+        <button class="exercise-btn" data-type="past_questions">
+          询问过去的动作
+        </button>
+        <button class="exercise-btn" data-type="present_past_contrast">
+          对比现在与过去
+        </button>
+      </div>
+
+      <div class="score-board">
+        <p>得分: <span id="score">0</span></p>
+        <p>
+          已练习: <span id="questionsAttempted">0</span> /
+          <span id="totalQuestions">6</span>
+        </p>
+      </div>
+
+      <div id="exercises"></div>
+    </div>
+
+    <script type="module" src="sentence_scramble.js"></script>
+  </body>
+</html>
