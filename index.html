@@ -3,15 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>英语练习</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>英语练习系统</title>
+    <link rel="stylesheet" href="styles/global.css" />
+    <style>
+      .exercise-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .exercise-list li {
+        margin-bottom: var(--spacing-unit);
+      }
+
+      .exercise-list a {
+        display: block;
+        padding: calc(var(--spacing-unit) * 2);
+        background-color: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        transition: all var(--transition-duration);
+      }
+
+      .exercise-list a:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <h1>英语数字练习门户</h1>
-      <ul>
+      <h1>英语练习系统</h1>
+      <ul class="exercise-list">
         <li>
-          <a href="exercises/listen-click/listen-click.html"
+          <a href="exercises/listen-type/listen-type.html"
             >听音辨数（选择题）</a
           >
         </li>
@@ -21,13 +45,18 @@
           >
         </li>
         <li>
-          <a href="exercises/category-choice/category-choice.html"
+          <a href="exercises/listen-type/listen-type.html"
             >词汇分类（同类词选择题）</a
           >
         </li>
         <li>
           <a href="exercises/sentence_scramble/sentence_scramble.html"
             >句子排序（拖拽题）</a
+          >
+        </li>
+        <li>
+          <a href="exercises/quick-select/quick-select.html"
+            >听音速记速选（快速选择题）</a
           >
         </li>
         <!-- 未来可扩展更多练习 -->

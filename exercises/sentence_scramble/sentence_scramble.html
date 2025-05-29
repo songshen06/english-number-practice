@@ -1,45 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>句子排序练习</title>
+    <link rel="stylesheet" href="../../styles/global.css" />
     <link rel="stylesheet" href="sentence_scramble.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>句子排序练习</h1>
-      <button id="backToHome">返回门户</button>
+    <div class="page-container">
+      <!-- 左侧固定区域：进度和得分 -->
+      <div class="fixed-sidebar">
+        <button id="backToHome">返回首页</button>
 
-      <div class="exercise-selection">
-        <label>选择练习类型:</label>
-        <button class="exercise-btn" data-type="family_present">
-          介绍家人 (现在时)
-        </button>
-        <button class="exercise-btn" data-type="past_state">
-          谈论过去的状态
-        </button>
-        <button class="exercise-btn" data-type="past_actions">
-          谈论过去的动作
-        </button>
-        <button class="exercise-btn" data-type="past_questions">
-          询问过去的动作
-        </button>
-        <button class="exercise-btn" data-type="present_past_contrast">
-          对比现在与过去
-        </button>
+        <!-- 游戏化进度展示 -->
+        <div class="progress-container">
+          <div class="progress-header">
+            <div class="progress-title">学习进度</div>
+            <div class="stars-container">
+              <div class="star" title="完成5个句子"></div>
+              <div class="star" title="完成10个句子"></div>
+              <div class="star" title="完成15个句子"></div>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%"></div>
+          </div>
+          <div class="progress-stats">
+            <span
+              >已完成: <span id="completedCount">0</span>/<span id="totalCount"
+                >0</span
+              ></span
+            >
+            <span>正确率: <span id="accuracy">0</span>%</span>
+          </div>
+        </div>
+
+        <div class="score-board">
+          <p>当前得分: <span id="currentScore">0</span></p>
+          <p>最高得分: <span id="highScore">0</span></p>
+        </div>
+
+        <!-- 新增：计时器显示 -->
+        <div id="timer" class="timer">00:00</div>
       </div>
 
-      <div class="score-board">
-        <p>得分: <span id="score">0</span></p>
-        <p>
-          已练习: <span id="questionsAttempted">0</span> /
-          <span id="totalQuestions">6</span>
-        </p>
-      </div>
+      <!-- 右侧主要内容区域 -->
+      <div class="main-content">
+        <!-- 练习类型选择 -->
+        <div class="exercise-selection">
+          <button class="exercise-btn" data-type="all">全部练习</button>
+          <div id="categoryButtons"></div>
+        </div>
 
-      <div id="exercises"></div>
+        <!-- 练习题目区域 -->
+        <div class="exercises-container">
+          <div id="exercises"></div>
+        </div>
+      </div>
     </div>
+
+    <!-- 成就提示 -->
+    <div class="achievement-toast">
+      <div class="achievement-text">恭喜获得 <strong>学习之星</strong>！</div>
+    </div>
+
+    <!-- 新增：提示系统 -->
+    <template id="hint-template">
+      <div class="hint">
+        <p>提示：尝试按照句子的逻辑顺序排列单词。</p>
+      </div>
+    </template>
 
     <script type="module" src="sentence_scramble.js"></script>
   </body>

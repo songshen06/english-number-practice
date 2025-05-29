@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>听音速记速选 - 英语练习系统</title>
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="quick-select.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>听音速记速选</h1>
+
+      <div class="exercise-container">
+        <div class="scoreboard">
+          <div>得分: <span id="score">0</span></div>
+          <div>
+            题目: <span id="currentQuestion">0</span>/<span id="totalQuestions"
+              >9</span
+            >
+          </div>
+        </div>
+
+        <div class="flash-text" id="flashText"></div>
+
+        <div class="controls">
+          <button id="playSoundBtn" class="primary-btn">播放音频</button>
+          <button
+            id="nextQuestionBtn"
+            class="primary-btn"
+            style="display: none"
+          >
+            下一题
+          </button>
+        </div>
+
+        <div id="options-container" class="options-container"></div>
+
+        <div id="feedback" class="feedback"></div>
+      </div>
+
+      <div class="navigation">
+        <a href="../../index.html" class="back-btn">返回主页</a>
+      </div>
+    </div>
+
+    <audio id="audioElement" style="display: none"></audio>
+    <script src="quick-select.js"></script>
+  </body>
+</html>

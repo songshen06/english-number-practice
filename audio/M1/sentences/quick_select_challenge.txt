@@ -1,0 +1,97 @@
+# 听音速记速选 (Quick Select Challenge)
+
+## 1. 核心词汇选择
+
+### Question 1
+Audio: 14_doctor.mp3
+Flash Text: "doctor"
+Options:
+A) doctor
+B) driver
+C) player
+D) office
+Correct Answer: A
+
+### Question 2
+Audio: 15_young.mp3
+Flash Text: "young"
+Options:
+A) young
+B) old
+C) new
+D) big
+Correct Answer: A
+
+### Question 3
+Audio: 16_drove.mp3
+Flash Text: "drove"
+Options:
+A) drive
+B) drove
+C) driver
+D) draw
+Correct Answer: B
+
+### Question 4
+Audio: 17_Chinese_music.mp3
+Flash Text: "Chinese music"
+Options:
+A) Chinese music
+B) English music
+C) flute music
+D) play music
+Correct Answer: A
+
+## 2. 短语或部分句意选择
+
+### Question 5
+Audio: 18_in_a_hospital.mp3
+Flash Text: "in a hospital"
+Options:
+A) in an office
+B) in a hospital
+C) on a bus
+D) at school
+Correct Answer: B
+
+### Question 6
+Audio: 19_ten_years_ago.mp3
+Flash Text: "ten years ago"
+Options:
+A) ten years old
+B) ten years later
+C) ten years ago
+D) now
+Correct Answer: C
+
+## 3. 语法点快速反应
+
+### Question 7
+Audio: 20_She_drove_a_bus.mp3
+Flash Text: "She ____ a bus."
+Options:
+A) drive
+B) drives
+C) drove
+D) driving
+Correct Answer: C
+
+### Question 8
+Audio: 21_He_was_a_doctor_before.mp3
+Flash Text: "He ____ a doctor before."
+Options:
+A) is
+B) are
+C) was
+D) were
+Correct Answer: C
+
+### Question 9
+Audio: 22_What_does_he_do_now.mp3
+Flash Text: "What ____ he do now?"
+Options:
+A) do
+B) did
+C) does
+D) is
+Correct Answer: C 
