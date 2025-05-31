@@ -1,72 +1,84 @@
 {
-  "questions": [
+  "modules": [
     {
-      "id": 1,
-      "audio": "14_doctor.mp3",
-      "flashText": "doctor",
-      "options": ["doctor", "driver", "player", "office"],
-      "correctAnswer": "doctor"
-    },
-    {
-      "id": 2,
-      "audio": "15_young.mp3",
-      "flashText": "young",
-      "options": ["young", "old", "new", "big"],
-      "correctAnswer": "young"
-    },
-    {
-      "id": 3,
-      "audio": "16_drove.mp3",
-      "flashText": "drove",
-      "options": ["drive", "drove", "driver", "draw"],
-      "correctAnswer": "drove"
-    },
-    {
-      "id": 4,
-      "audio": "17_Chinese_music.mp3",
-      "flashText": "Chinese music",
-      "options": [
-        "Chinese music",
-        "English music",
-        "flute music",
-        "play music"
-      ],
-      "correctAnswer": "Chinese music"
-    },
-    {
-      "id": 5,
-      "audio": "18_in_a_hospital.mp3",
-      "flashText": "in a hospital",
-      "options": ["in an office", "in a hospital", "on a bus", "at school"],
-      "correctAnswer": "in a hospital"
-    },
-    {
-      "id": 6,
-      "audio": "19_ten_years_ago.mp3",
-      "flashText": "ten years ago",
-      "options": ["ten years old", "ten years later", "ten years ago", "now"],
-      "correctAnswer": "ten years ago"
-    },
-    {
-      "id": 7,
-      "audio": "20_She_drove_a_bus.mp3",
-      "flashText": "She ____ a bus.",
-      "options": ["drive", "drives", "drove", "driving"],
-      "correctAnswer": "drove"
-    },
-    {
-      "id": 8,
-      "audio": "21_He_was_a_doctor_before.mp3",
-      "flashText": "He ____ a doctor before.",
-      "options": ["is", "are", "was", "were"],
-      "correctAnswer": "was"
-    },
-    {
-      "id": 9,
-      "audio": "22_What_does_he_do_now.mp3",
-      "flashText": "What ____ he do now?",
-      "options": ["do", "did", "does", "is"],
-      "correctAnswer": "does"
+      "id": "module1",
+      "name": "Module 1",
+      "description": "基础词汇和短语练习",
+      "questions": [
+        {
+          "id": 1,
+          "audio": "14_doctor.mp3",
+          "flashText": "doctor",
+          "options": ["doctor", "driver", "player", "office"],
+          "correctAnswer": "doctor"
+        },
+        {
+          "id": 2,
+          "audio": "15_young.mp3",
+          "flashText": "young",
+          "options": ["young", "old", "new", "big"],
+          "correctAnswer": "young"
+        },
+        {
+          "id": 3,
+          "audio": "16_drove.mp3",
+          "flashText": "drove",
+          "options": ["drive", "drove", "driver", "draw"],
+          "correctAnswer": "drove"
+        },
+        {
+          "id": 4,
+          "audio": "17_Chinese_music.mp3",
+          "flashText": "Chinese music",
+          "options": [
+            "Chinese music",
+            "English music",
+            "flute music",
+            "play music"
+          ],
+          "correctAnswer": "Chinese music"
+        },
+        {
+          "id": 5,
+          "audio": "18_in_a_hospital.mp3",
+          "flashText": "in a hospital",
+          "options": ["in an office", "in a hospital", "on a bus", "at school"],
+          "correctAnswer": "in a hospital"
+        },
+        {
+          "id": 6,
+          "audio": "19_ten_years_ago.mp3",
+          "flashText": "ten years ago",
+          "options": [
+            "ten years old",
+            "ten years later",
+            "ten years ago",
+            "now"
+          ],
+          "correctAnswer": "ten years ago"
+        },
+        {
+          "id": 7,
+          "audio": "20_She_drove_a_bus.mp3",
+          "flashText": "She ____ a bus.",
+          "options": ["drive", "drives", "drove", "driving"],
+          "correctAnswer": "drove"
+        },
+        {
+          "id": 8,
+          "audio": "21_He_was_a_doctor_before.mp3",
+          "flashText": "He ____ a doctor before.",
+          "options": ["is", "are", "was", "were"],
+          "correctAnswer": "was"
+        },
+        {
+          "id": 9,
+          "audio": "22_What_does_he_do_now.mp3",
+          "flashText": "What ____ he do now?",
+          "options": ["do", "did", "does", "is"],
+          "correctAnswer": "does"
+        }
+      ]
     }
   ]
 }

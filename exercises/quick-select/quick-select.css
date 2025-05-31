@@ -5,6 +5,7 @@
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .scoreboard {
@@ -141,4 +142,72 @@
   background: #ccc;
   cursor: not-allowed;
   transform: none;
+}
+
+/* 庆祝动画样式 */
+.celebration {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.celebration-icon {
+  font-size: 24px;
+  animation: celebrate 0.5s ease-out;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 添加星星动画 */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background: #ffd700;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: starFall 1s ease-out forwards;
+}
+
+@keyframes starFall {
+  0% {
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%) rotate(360deg);
+    opacity: 0;
+  }
 }

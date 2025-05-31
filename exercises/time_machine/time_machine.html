@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>时空魔法学习机 - 动词变形冒险</title>
+    <link rel="stylesheet" href="time_machine.css" />
+  </head>
+  <body>
+    <div class="magic-machine">
+      <div class="machine-top">
+        <div class="gears"></div>
+        <h1>时空魔法学习机</h1>
+      </div>
+      <div class="machine-body">
+        <div class="machine-img"></div>
+        <div id="verb-card-slot"></div>
+        <div id="output-slot"></div>
+        <div id="magic-animation"></div>
+      </div>
+      <div class="question-area">
+        <div id="question"></div>
+        <div id="verb-options"></div>
+      </div>
+      <div class="feedback-area" id="feedback"></div>
+      <div class="progress-area">
+        <span id="score"></span>
+        <progress id="progress-bar" value="0" max="10"></progress>
+        <button id="retry-btn" style="display: none">再来一次</button>
+      </div>
+    </div>
+    <div id="assistant-tip" class="assistant-tip">
+      <div class="assistant-img"></div>
+      <div class="tip-content"></div>
+      <button id="close-tip">明白啦！</button>
+    </div>
+    <audio id="audio-success" src="assets/sounds/success.mp3"></audio>
+    <audio id="audio-error" src="assets/sounds/error.mp3"></audio>
+    <audio id="audio-pop" src=""></audio>
+    <audio id="audio-fireworks" src=""></audio>
+    <script src="time_machine.js"></script>
+  </body>
+</html>

@@ -39,7 +39,21 @@ export function displayExercises(exercises, container, count = 6) {
     // 创建句子容器
     const sentenceContainer = document.createElement("div");
     sentenceContainer.className = "sentence-container";
-    sentenceContainer.setAttribute("data-correct-text", sentence.text);
+
+    // 从 words 数组中构建完整的句子文本，标点前不加空格
+    const sentenceText = sentence.words
+      .map((word) => word.text)
+      .reduce((acc, cur) => {
+        if ([".", ",", "?", "!"].includes(cur)) {
+          return acc.trimEnd() + cur;
+        }
+        return acc + (acc ? " " : "") + cur;
+      }, "");
+    sentenceContainer.setAttribute("data-correct-text", sentenceText);
+    sentenceContainer.dataset.sentence = JSON.stringify(sentence);
+
+    // 保存当前句子对象，用于后续的词性标记
+    window.currentSentence = sentence;
 
     // 添加音频播放按钮
     const audioButton = document.createElement("button");
@@ -59,7 +73,7 @@ export function displayExercises(exercises, container, count = 6) {
     shuffledWords.forEach((word) => {
       const wordButton = document.createElement("button");
       wordButton.className = "word-button";
-      wordButton.textContent = word;
+      wordButton.textContent = word.text;
       wordButton.onclick = () => window.selectWord(wordButton, word);
       wordButtonsContainer.appendChild(wordButton);
     });
@@ -92,13 +106,27 @@ export function displayExercises(exercises, container, count = 6) {
     const checkButton = document.createElement("button");
     checkButton.className = "check-button";
     checkButton.textContent = "检查答案";
-    checkButton.onclick = () => window.checkAnswer(checkButton);
+    checkButton.addEventListener("click", function () {
+      console.log("Check button clicked"); // 调试日志
+      if (typeof window.checkAnswer === "function") {
+        window.checkAnswer(this);
+      } else {
+        console.error("checkAnswer function is not defined"); // 调试日志
+      }
+    });
 
     const resetButton = document.createElement("button");
     resetButton.className = "reset-button";
     resetButton.textContent = "重置";
     resetButton.disabled = true;
-    resetButton.onclick = () => window.resetExercise(resetButton);
+    resetButton.addEventListener("click", function () {
+      console.log("Reset button clicked"); // 调试日志
+      if (typeof window.resetExercise === "function") {
+        window.resetExercise(this);
+      } else {
+        console.error("resetExercise function is not defined"); // 调试日志
+      }
+    });
 
     controls.appendChild(checkButton);
     controls.appendChild(resetButton);

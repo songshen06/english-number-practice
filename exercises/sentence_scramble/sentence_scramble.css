@@ -888,3 +888,73 @@ button:active {
     opacity: 0;
   }
 }
+
+/* 词性颜色样式 */
+.word-noun {
+  color: #2196f3; /* 蓝色 - 名词 */
+  font-weight: bold;
+}
+
+.word-verb {
+  color: #4caf50; /* 绿色 - 动词 */
+  font-weight: bold;
+}
+
+.word-adjective {
+  color: #ff9800; /* 橙色 - 形容词 */
+  font-weight: bold;
+}
+
+.word-adverb {
+  color: #9c27b0; /* 紫色 - 副词 */
+  font-weight: bold;
+}
+
+.word-pronoun {
+  color: #e91e63; /* 粉色 - 代词 */
+  font-weight: bold;
+}
+
+.word-article {
+  color: #795548; /* 棕色 - 冠词 */
+  font-weight: bold;
+}
+
+.word-preposition {
+  color: #607d8b; /* 蓝灰色 - 介词 */
+  font-weight: bold;
+}
+
+.word-determiner {
+  color: #795548; /* 棕色 - 限定词 */
+  font-weight: bold;
+}
+
+.word-punctuation {
+  color: #333; /* 黑色 - 标点符号 */
+  font-weight: normal;
+}
+
+/* 词性图例 */
+.pos-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+.pos-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+}
+
+.pos-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}

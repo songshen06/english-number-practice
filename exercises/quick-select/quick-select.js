@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await fetch("questions.json");
       const data = await response.json();
-      questions = data.questions;
+      // 获取第一个模块的题目
+      questions = data.modules[0].questions;
       totalQuestionsEl.textContent = questions.length;
       initGame();
     } catch (error) {
@@ -110,9 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isCorrect) {
       buttonEl.classList.add("correct");
-      feedbackEl.textContent = "正确! Great!";
+      feedbackEl.innerHTML =
+        '<div class="celebration"><div class="celebration-icon">⭐</div></div>正确! Great!';
       feedbackEl.className = "correct";
       score++;
+      showStars();
     } else {
       buttonEl.classList.add("incorrect");
       feedbackEl.textContent = `错误。正确答案是 ${currentQuestionData.correctAnswer}。`;
@@ -121,6 +124,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateScoreboard();
     nextQuestionBtn.style.display = "inline-block";
+  }
+
+  // 显示星星动画
+  function showStars() {
+    const container = document.querySelector(".exercise-container");
+
+    // 创建星星动画
+    const stars = document.createElement("div");
+    stars.className = "stars";
+    container.appendChild(stars);
+
+    // 添加多个星星
+    for (let i = 0; i < 5; i++) {
+      const star = document.createElement("div");
+      star.className = "star";
+      star.style.width = Math.random() * 20 + 10 + "px";
+      star.style.height = star.style.width;
+      star.style.left = Math.random() * 100 + "%";
+      star.style.animationDelay = Math.random() * 0.5 + "s";
+      stars.appendChild(star);
+    }
+
+    // 1秒后移除动画元素
+    setTimeout(() => {
+      stars.remove();
+    }, 1000);
   }
 
   // Update scoreboard

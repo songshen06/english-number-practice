@@ -7,17 +7,34 @@
         {
           "audio": "M1/sentences/01_My_father_is_a_doctor.mp3",
           "text": "My father is a doctor.",
-          "words": ["a", "doctor", "is", "father", "My"]
+          "words": [
+            { "text": "My", "pos": "pronoun" },
+            { "text": "father", "pos": "noun" },
+            { "text": "is", "pos": "verb" },
+            { "text": "a", "pos": "article" },
+            { "text": "doctor", "pos": "noun" }
+          ]
         },
         {
           "audio": "M1/sentences/02_His_name_is_Drew.mp3",
           "text": "His name is Drew.",
-          "words": ["Drew", "is", "name", "His"]
+          "words": [
+            { "text": "His", "pos": "pronoun" },
+            { "text": "name", "pos": "noun" },
+            { "text": "is", "pos": "verb" },
+            { "text": "Drew", "pos": "noun" }
+          ]
         },
         {
           "audio": "M1/sentences/03_She_loves_me_very_much.mp3",
           "text": "She loves me very much.",
-          "words": ["much", "very", "me", "loves", "She"]
+          "words": [
+            { "text": "She", "pos": "pronoun" },
+            { "text": "loves", "pos": "verb" },
+            { "text": "me", "pos": "pronoun" },
+            { "text": "very", "pos": "adverb" },
+            { "text": "much", "pos": "adverb" }
+          ]
         }
       ]
     },
@@ -28,12 +45,26 @@
         {
           "audio": "M1/sentences/04_She_was_young_in_this_picture.mp3",
           "text": "She was young in this picture.",
-          "words": ["picture", "this", "in", "young", "was", "She"]
+          "words": [
+            { "text": "She", "pos": "pronoun" },
+            { "text": "was", "pos": "verb" },
+            { "text": "young", "pos": "adjective" },
+            { "text": "in", "pos": "preposition" },
+            { "text": "this", "pos": "determiner" },
+            { "text": "picture", "pos": "noun" }
+          ]
         },
         {
           "audio": "M1/sentences/05_He_was_a_flute_player_before.mp3",
           "text": "He was a flute player before.",
-          "words": ["before", "player", "flute", "a", "was", "He"]
+          "words": [
+            { "text": "He", "pos": "pronoun" },
+            { "text": "was", "pos": "verb" },
+            { "text": "a", "pos": "article" },
+            { "text": "flute", "pos": "noun" },
+            { "text": "player", "pos": "noun" },
+            { "text": "before", "pos": "adverb" }
+          ]
         }
       ]
     },
@@ -44,17 +75,33 @@
         {
           "audio": "M1/sentences/06_She_drove_a_bus.mp3",
           "text": "She drove a bus.",
-          "words": ["bus", "a", "drove", "She"]
+          "words": [
+            { "text": "She", "pos": "pronoun" },
+            { "text": "drove", "pos": "verb" },
+            { "text": "a", "pos": "article" },
+            { "text": "bus", "pos": "noun" }
+          ]
         },
         {
           "audio": "M1/sentences/07_He_played_Chinese_music.mp3",
           "text": "He played Chinese music.",
-          "words": ["music", "Chinese", "played", "He"]
+          "words": [
+            { "text": "He", "pos": "pronoun" },
+            { "text": "played", "pos": "verb" },
+            { "text": "Chinese", "pos": "adjective" },
+            { "text": "music", "pos": "noun" }
+          ]
         },
         {
           "audio": "M1/sentences/08_I_worked_in_an_office.mp3",
           "text": "I worked in an office.",
-          "words": ["office", "an", "in", "worked", "I"]
+          "words": [
+            { "text": "I", "pos": "pronoun" },
+            { "text": "worked", "pos": "verb" },
+            { "text": "in", "pos": "preposition" },
+            { "text": "an", "pos": "article" },
+            { "text": "office", "pos": "noun" }
+          ]
         }
       ]
     },
@@ -65,12 +112,24 @@
         {
           "audio": "M1/sentences/09_What_did_she_drive.mp3",
           "text": "What did she drive?",
-          "words": ["drive", "she", "did", "What", "?"]
+          "words": [
+            { "text": "What", "pos": "pronoun" },
+            { "text": "did", "pos": "verb" },
+            { "text": "she", "pos": "pronoun" },
+            { "text": "drive", "pos": "verb" },
+            { "text": "?", "pos": "punctuation" }
+          ]
         },
         {
           "audio": "M1/sentences/10_Where_did_he_work.mp3",
           "text": "Where did he work?",
-          "words": ["work", "he", "did", "Where", "?"]
+          "words": [
+            { "text": "Where", "pos": "adverb" },
+            { "text": "did", "pos": "verb" },
+            { "text": "he", "pos": "pronoun" },
+            { "text": "work", "pos": "verb" },
+            { "text": "?", "pos": "punctuation" }
+          ]
         }
       ]
     },
@@ -81,17 +140,34 @@
         {
           "audio": "M1/sentences/11_Hes_fishing.mp3",
           "text": "He's fishing.",
-          "words": ["fishing", "He's"]
+          "words": [
+            { "text": "He's", "pos": "pronoun" },
+            { "text": "fishing", "pos": "verb" }
+          ]
         },
         {
           "audio": "M1/sentences/12_He_was_a_train_driver_before.mp3",
           "text": "He was a train driver before.",
-          "words": ["before", "driver", "train", "a", "was", "He"]
+          "words": [
+            { "text": "He", "pos": "pronoun" },
+            { "text": "was", "pos": "verb" },
+            { "text": "a", "pos": "article" },
+            { "text": "train", "pos": "noun" },
+            { "text": "driver", "pos": "noun" },
+            { "text": "before", "pos": "adverb" }
+          ]
         },
         {
           "audio": "M1/sentences/13_What_does_he_do_now.mp3",
           "text": "What does he do now?",
-          "words": ["now", "do", "he", "does", "What", "?"]
+          "words": [
+            { "text": "What", "pos": "pronoun" },
+            { "text": "does", "pos": "verb" },
+            { "text": "he", "pos": "pronoun" },
+            { "text": "do", "pos": "verb" },
+            { "text": "now", "pos": "adverb" },
+            { "text": "?", "pos": "punctuation" }
+          ]
         }
       ]
     }

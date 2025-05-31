@@ -138,23 +138,61 @@ function stopTimer() {
   }
 }
 
+// 添加词性图例
+function addPosLegend() {
+  const legend = document.createElement("div");
+  legend.className = "pos-legend";
+
+  const posTypes = [
+    { pos: "noun", color: "#2196F3", text: "名词" },
+    { pos: "verb", color: "#4CAF50", text: "动词" },
+    { pos: "adjective", color: "#FF9800", text: "形容词" },
+    { pos: "adverb", color: "#9C27B0", text: "副词" },
+    { pos: "pronoun", color: "#E91E63", text: "代词" },
+    { pos: "article", color: "#795548", text: "冠词" },
+    { pos: "preposition", color: "#607D8B", text: "介词" },
+  ];
+
+  posTypes.forEach((type) => {
+    const item = document.createElement("div");
+    item.className = "pos-item";
+    item.innerHTML = `
+      <div class="pos-color" style="background-color: ${type.color}"></div>
+      <span>${type.text}</span>
+    `;
+    legend.appendChild(item);
+  });
+
+  return legend;
+}
+
 // 修改检查答案函数，添加计时和提示功能
-window.checkAnswer = function (button) {
+function checkAnswer(button) {
+  console.log("Check answer function called"); // 调试日志
   const container = button.closest(".sentence-container");
+  const sentence = JSON.parse(container.dataset.sentence); // 获取当前句子的对象
   const dropZones = container.querySelectorAll(".drop-zone");
   const feedback = container.querySelector(".feedback");
 
-  // 正确答案直接取 data-correct-text 属性
-  const correctText = container
-    .getAttribute("data-correct-text")
-    .trim()
-    .replace(/\s+/g, " ");
+  // 获取正确答案
+  const correctText = container.getAttribute("data-correct-text").trim();
+  console.log("Correct text:", correctText); // 调试日志
 
-  // 用户答案拼接
+  // 获取用户答案
   const userOrder = Array.from(dropZones).map((zone) => {
     const wordButton = zone.querySelector(".word-button");
     return wordButton ? wordButton.textContent.trim() : "";
   });
+  console.log("User order:", userOrder); // 调试日志
+
+  // 检查是否所有空格都已填写
+  if (userOrder.some((word) => word === "")) {
+    feedback.textContent = "请填写所有单词！";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+
+  // 构建用户答案字符串，处理标点符号
   let userText = "";
   userOrder.forEach((word, idx) => {
     if ([".", ",", "?", "!"].includes(word) && idx > 0) {
@@ -163,19 +201,35 @@ window.checkAnswer = function (button) {
       userText += (userText ? " " : "") + word;
     }
   });
-  userText = userText.trim().replace(/\s+/g, " ");
+  userText = userText.trim();
+  console.log("User text:", userText); // 调试日志
 
-  if (userOrder.some((word) => word === "")) {
-    feedback.textContent = "请填写所有单词！";
-    feedback.className = "feedback incorrect";
-    return;
-  }
-
+  // 比较答案（不区分大小写）
   const isCorrect = userText.toLowerCase() === correctText.toLowerCase();
+  console.log("Is correct:", isCorrect); // 调试日志
 
   if (isCorrect) {
-    feedback.textContent = "正确！";
+    // 显示正确答案，并添加词性标记
+    const words = sentence.words;
+    const markedText = words
+      .map((word) => {
+        const className = `word-${word.pos}`;
+        return `<span class="${className}">${word.text}</span>`;
+      })
+      .join(" ");
+
+    feedback.innerHTML = `
+      <div class="correct-feedback">
+        <div class="feedback-text">正确！</div>
+        <div class="marked-sentence">${markedText}</div>
+      </div>
+    `;
     feedback.className = "feedback correct";
+
+    // 添加词性图例
+    const legend = addPosLegend();
+    feedback.appendChild(legend);
+
     score++;
 
     // 添加动画效果
@@ -224,7 +278,10 @@ window.checkAnswer = function (button) {
   const resetButton = container.querySelector(".reset-button");
   if (checkButton) checkButton.disabled = true;
   if (resetButton) resetButton.disabled = false;
-};
+}
+
+// 将函数添加到全局作用域
+window.checkAnswer = checkAnswer;
 
 // 修改重置练习函数，添加计时器重置
 window.resetExercise = function (button) {
