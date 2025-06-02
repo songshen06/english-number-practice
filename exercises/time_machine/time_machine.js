@@ -1,10 +1,47 @@
 let questions = [];
+let allQuestions = [];
 let current = 0,
   score = 0;
 
 async function loadQuestions() {
   const res = await fetch("questions.json");
-  questions = await res.json();
+  allQuestions = await res.json();
+  questions = allQuestions;
+}
+
+function getUniqueCategories() {
+  const cats = allQuestions.map((q) => q.category).filter(Boolean);
+  return Array.from(new Set(cats));
+}
+
+function populateCategorySelect() {
+  const select = document.getElementById("category-select");
+  select.innerHTML = "";
+  const allOpt = document.createElement("option");
+  allOpt.value = "";
+  allOpt.textContent = "全部";
+  select.appendChild(allOpt);
+  getUniqueCategories().forEach((cat) => {
+    const opt = document.createElement("option");
+    opt.value = cat;
+    opt.textContent = cat;
+    select.appendChild(opt);
+  });
+}
+
+function filterQuestionsByCategory(category) {
+  if (!category) return allQuestions;
+  return allQuestions.filter((q) => q.category === category);
+}
+
+function startQuizByCategory(category) {
+  questions = filterQuestionsByCategory(category);
+  current = 0;
+  score = 0;
+  document.getElementById("progress-bar").max = questions.length;
+  document.getElementById("progress-bar").value = questions.length;
+  updateProgress();
+  showQuestion();
 }
 
 function showTip(tip) {
@@ -17,6 +54,13 @@ function hideTip() {
 }
 
 function showQuestion() {
+  if (questions.length === 0) {
+    document.getElementById("question").textContent = "本类别暂无题目。";
+    document.getElementById("verb-options").innerHTML = "";
+    document.getElementById("feedback").textContent = "";
+    document.getElementById("progress-bar").value = 0;
+    return;
+  }
   const q = questions[current];
   document.getElementById("question").innerHTML = q.sentence.replace(
     q.blank,
@@ -128,6 +172,7 @@ document.getElementById("retry-btn").onclick = () => {
 
 window.onload = async () => {
   await loadQuestions();
+  populateCategorySelect();
   document.getElementById("progress-bar").max = questions.length;
   document.getElementById("progress-bar").value = questions.length;
   showTip(
@@ -135,7 +180,10 @@ window.onload = async () => {
   );
   document.getElementById("close-tip").onclick = () => {
     hideTip();
-    showQuestion();
-    updateProgress();
+    // 默认显示全部题目
+    startQuizByCategory(document.getElementById("category-select").value);
+  };
+  document.getElementById("category-select").onchange = function () {
+    startQuizByCategory(this.value);
   };
 };

@@ -4,118 +4,319 @@
     "blank": "____",
     "options": ["send", "sends", "sent", "sending"],
     "answer": "sent",
-    "tip": "send 的 Simple Past 是 sent"
+    "tip": "send 的 Simple Past 是 sent",
+    "category": "一般过去时"
   },
   {
     "sentence": "My Grandma usually ____ me English books for my birthday.",
     "blank": "____",
     "options": ["sent", "sends", "send", "sending"],
     "answer": "sends",
-    "tip": "send 的 Simple Present 是 sends"
+    "tip": "send 的 Simple Present 是 sends",
+    "category": "一般现在时"
   },
   {
     "sentence": "Last summer, I ____ my bike in the park.",
     "blank": "____",
     "options": ["ride", "rides", "riding", "rode"],
     "answer": "rode",
-    "tip": "ride 的 Simple Past 是 rode"
+    "tip": "ride 的 Simple Past 是 rode",
+    "category": "一般过去时"
   },
   {
     "sentence": "Look! He ____ his new bike now.",
     "blank": "____",
     "options": ["is riding", "am riding", "are riding", "was riding"],
     "answer": "is riding",
-    "tip": "ride 的 Present Continuous 是 is riding (This targets a verb phrase.)"
+    "tip": "ride 的 Present Continuous 是 is riding (This targets a verb phrase.)",
+    "category": "现在进行时"
   },
   {
     "sentence": "I ____ my bike to school every day.",
     "blank": "____",
     "options": ["rode", "riding", "ride", "rides"],
     "answer": "ride",
-    "tip": "ride 的 Simple Present 是 ride"
+    "tip": "ride 的 Simple Present 是 ride",
+    "category": "一般现在时"
   },
   {
     "sentence": "We ____ a kite on the beach yesterday.",
     "blank": "____",
     "options": ["fly", "flies", "flying", "flew"],
     "answer": "flew",
-    "tip": "fly 的 Simple Past 是 flew"
+    "tip": "fly 的 Simple Past 是 flew",
+    "category": "一般过去时"
   },
   {
     "sentence": "In summer, children often ____ kites.",
     "blank": "____",
     "options": ["flew", "flying", "fly", "flies"],
     "answer": "fly",
-    "tip": "fly 的 Simple Present 是 fly"
+    "tip": "fly 的 Simple Present 是 fly",
+    "category": "一般现在时"
   },
   {
     "sentence": "She ____ many English books from her friend in the US last week.",
     "blank": "____",
     "options": ["get", "gets", "getting", "got"],
     "answer": "got",
-    "tip": "get 的 Simple Past 是 got"
+    "tip": "get 的 Simple Past 是 got",
+    "category": "一般过去时"
   },
   {
     "sentence": "I always ____ good scores in the maths game.",
     "blank": "____",
     "options": ["got", "getting", "get", "gets"],
     "answer": "get",
-    "tip": "get 的 Simple Present 是 get"
+    "tip": "get 的 Simple Present 是 get",
+    "category": "一般现在时"
   },
   {
     "sentence": "He ____ a delicious American chocolate a minute ago.",
     "blank": "____",
     "options": ["eat", "eats", "eating", "ate"],
     "answer": "ate",
-    "tip": "eat 的 Simple Past 是 ate"
+    "tip": "eat 的 Simple Past 是 ate",
+    "category": "一般过去时"
   },
   {
     "sentence": "My cat ____ fish every day.",
     "blank": "____",
     "options": ["ate", "eating", "eat", "eats"],
     "answer": "eats",
-    "tip": "eat 的 Simple Present 是 eats"
+    "tip": "eat 的 Simple Present 是 eats",
+    "category": "一般现在时"
   },
   {
     "sentence": "Yesterday, I ____ an interesting English book.",
     "blank": "____",
     "options": ["read /riːd/", "reads /riːdz/", "reading", "read /rɛd/"],
     "answer": "read /rɛd/",
-    "tip": "read 的 Simple Past 是 read /rɛd/ (Correct form 'read' pronounced /rɛd/.)"
+    "tip": "read 的 Simple Past 是 read /rɛd/ (Correct form 'read' pronounced /rɛd/.)",
+    "category": "一般过去时"
   },
   {
     "sentence": "She ____ English books in the evening.",
     "blank": "____",
     "options": ["read /rɛd/", "reads /riːdz/", "reading", "read /riːd/"],
     "answer": "reads /riːdz/",
-    "tip": "read 的 Simple Present 是 reads /riːdz/ (Correct form 'reads' pronounced /riːdz/.)"
+    "tip": "read 的 Simple Present 是 reads /riːdz/ (Correct form 'reads' pronounced /riːdz/.)",
+    "category": "一般现在时"
   },
   {
     "sentence": "The kite ____ very beautiful last Sunday.",
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "was",
-    "tip": "be 的 Simple Past 是 was"
+    "tip": "be 的 Simple Past 是 was",
+    "category": "一般过去时"
   },
   {
     "sentence": "My maths game ____ interesting now.",
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "is",
-    "tip": "be 的 Simple Present 是 is"
+    "tip": "be 的 Simple Present 是 is",
+    "category": "一般现在时"
   },
   {
     "sentence": "The English books ____ on the table yesterday.",
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "were",
-    "tip": "be 的 Simple Past 是 were"
+    "tip": "be 的 Simple Past 是 were",
+    "category": "一般过去时"
   },
   {
     "sentence": "American chocolate ____ usually delicious.",
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "is",
-    "tip": "be 的 Simple Present 是 is"
+    "tip": "be 的 Simple Present 是 is",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "My mother ____ a driver.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is",
+    "tip": "be 动词的现在时单数用 is",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "Her name ____ Sue.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is",
+    "tip": "be 动词的现在时单数用 is",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "She ____ me very much.",
+    "blank": "____",
+    "options": ["loves", "love", "loved", "loving"],
+    "answer": "loves",
+    "tip": "第三人称单数动词加 s",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "I ____ her, too.",
+    "blank": "____",
+    "options": ["love", "loves", "loved", "loving"],
+    "answer": "love",
+    "tip": "主语 I 用原形 love",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "He ____ in a hospital.",
+    "blank": "____",
+    "options": ["works", "worked", "work", "working"],
+    "answer": "works",
+    "tip": "第三人称单数动词加 s",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "She ____ a driver before.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "was",
+    "tip": "be 动词的过去式单数用 was",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "He ____ a flute player before.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "was",
+    "tip": "be 动词的过去式单数用 was",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "He ____ a taxi driver.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "was",
+    "tip": "be 动词的过去式单数用 was",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "He ____ a doctor.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "was",
+    "tip": "be 动词的过去式单数用 was",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "He ____ a taxi ten years ago.",
+    "blank": "____",
+    "options": ["drove", "drives", "drive", "driving"],
+    "answer": "drove",
+    "tip": "drive 的过去式是 drove",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "I ____ in an office.",
+    "blank": "____",
+    "options": ["worked", "work", "works", "working"],
+    "answer": "worked",
+    "tip": "work 的过去式是 worked",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "I ____ every day.",
+    "blank": "____",
+    "options": ["worked", "work", "works", "working"],
+    "answer": "worked",
+    "tip": "work 的过去式是 worked",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "He ____ in a hospital.",
+    "blank": "____",
+    "options": ["worked", "work", "works", "working"],
+    "answer": "worked",
+    "tip": "work 的过去式是 worked",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "What ____ she drive?",
+    "blank": "____",
+    "options": ["did", "does", "do", "doing"],
+    "answer": "did",
+    "tip": "一般过去时疑问句用 did",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "What music ____ he play?",
+    "blank": "____",
+    "options": ["did", "does", "do", "doing"],
+    "answer": "did",
+    "tip": "一般过去时疑问句用 did",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "What ____ they do ten years ago?",
+    "blank": "____",
+    "options": ["did", "does", "do", "doing"],
+    "answer": "did",
+    "tip": "一般过去时疑问句用 did",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Where ____ he work?",
+    "blank": "____",
+    "options": ["did", "does", "do", "doing"],
+    "answer": "did",
+    "tip": "一般过去时疑问句用 did",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "He ____ fishing.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is",
+    "tip": "be 动词的现在时单数用 is",
+    "category": "现在进行时"
+  },
+  {
+    "sentence": "He ____ a train driver before.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "was",
+    "tip": "be 动词的过去式单数用 was",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "What ____ he do now?",
+    "blank": "____",
+    "options": ["does", "did", "do", "doing"],
+    "answer": "does",
+    "tip": "一般现在时疑问句用 does",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "He ____ an èrhú player.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is",
+    "tip": "be 动词的现在时单数用 is",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "What music ____ he play?",
+    "blank": "____",
+    "options": ["does", "did", "do", "doing"],
+    "answer": "does",
+    "tip": "一般现在时疑问句用 does",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "He ____ Chinese music.",
+    "blank": "____",
+    "options": ["plays", "played", "play", "playing"],
+    "answer": "plays",
+    "tip": "第三人称单数动词加 s",
+    "category": "一般现在时"
   }
 ]
