@@ -2,6 +2,7 @@ let questions = [];
 let allQuestions = [];
 let current = 0,
   score = 0;
+let answerLog = [];
 
 async function loadQuestions() {
   const res = await fetch("questions.json");
@@ -35,11 +36,28 @@ function filterQuestionsByCategory(category) {
 }
 
 function startQuizByCategory(category) {
-  questions = filterQuestionsByCategory(category);
+  if (!category) {
+    // 全部类别，每类随机抽取 10 题
+    const cats = getUniqueCategories();
+    let selected = [];
+    cats.forEach((cat) => {
+      const catQuestions = allQuestions.filter((q) => q.category === cat);
+      // 随机打乱
+      const shuffled = catQuestions.sort(() => Math.random() - 0.5);
+      // 取前 10 个或全部
+      selected = selected.concat(shuffled.slice(0, 10));
+    });
+    // 最终再整体打乱
+    questions = selected.sort(() => Math.random() - 0.5);
+  } else {
+    questions = filterQuestionsByCategory(category);
+  }
   current = 0;
   score = 0;
+  answerLog = [];
   document.getElementById("progress-bar").max = questions.length;
   document.getElementById("progress-bar").value = questions.length;
+  document.getElementById("download-report").style.display = "none";
   updateProgress();
   showQuestion();
 }
@@ -85,7 +103,16 @@ function showQuestion() {
 
 function checkAnswer(btn, q) {
   const idx = +btn.dataset.idx;
-  if (q.options[idx] === q.answer) {
+  const userAnswer = q.options[idx];
+  const isCorrect = userAnswer === q.answer;
+  answerLog.push({
+    sentence: q.sentence,
+    category: q.category || "",
+    userAnswer: userAnswer,
+    correctAnswer: q.answer,
+    result: isCorrect ? "正确" : "错误",
+  });
+  if (isCorrect) {
     score++;
     playSound("success");
     showFeedback("perfect");
@@ -98,6 +125,7 @@ function checkAnswer(btn, q) {
     playSound("error");
     showFeedback("try-again");
     btn.classList.add("shake");
+    showTip(q.tip);
     setTimeout(() => {
       btn.classList.remove("shake");
     }, 600);
@@ -160,15 +188,42 @@ function showEnd() {
   document.getElementById("feedback").className = "feedback-area perfect";
   document.getElementById("progress-bar").value = 0;
   document.getElementById("retry-btn").style.display = "";
+  document.getElementById("download-report").style.display = "";
 }
 
 document.getElementById("close-tip").onclick = hideTip;
 document.getElementById("retry-btn").onclick = () => {
   current = 0;
   score = 0;
+  answerLog = [];
   document.getElementById("retry-btn").style.display = "none";
+  document.getElementById("download-report").style.display = "none";
   showTip("动词变身口诀：动词过去式要记牢，规则加ed，不规则要背好！");
 };
+
+document.getElementById("download-report").onclick = exportToCsv;
+
+function exportToCsv() {
+  const header = "题目,题目类型,用户选择,正确答案,结果\n";
+  const rows = answerLog.map(
+    (log) =>
+      `"${log.sentence.replace(/"/g, '""')}",` +
+      `"${log.category}",` +
+      `"${log.userAnswer}",` +
+      `"${log.correctAnswer}",` +
+      `"${log.result}"`
+  );
+  const csvContent = header + rows.join("\n");
+  const blob = new Blob([csvContent], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "测试报告.csv";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 
 window.onload = async () => {
   await loadQuestions();

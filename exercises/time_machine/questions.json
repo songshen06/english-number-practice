@@ -192,7 +192,7 @@
     "category": "一般过去时"
   },
   {
-    "sentence": "He ____ a taxi driver.",
+    "sentence": "He ____ a taxi driver before.",
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "was",
@@ -200,7 +200,7 @@
     "category": "一般过去时"
   },
   {
-    "sentence": "He ____ a doctor.",
+    "sentence": "He ____ a doctor before.",
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "was",
@@ -219,41 +219,41 @@
     "sentence": "I ____ in an office.",
     "blank": "____",
     "options": ["worked", "work", "works", "working"],
-    "answer": "worked",
-    "tip": "work 的过去式是 worked",
-    "category": "一般过去时"
+    "answer": "work",
+    "tip": "主语 I 用原形 work",
+    "category": "一般现在时"
   },
   {
     "sentence": "I ____ every day.",
     "blank": "____",
     "options": ["worked", "work", "works", "working"],
-    "answer": "worked",
-    "tip": "work 的过去式是 worked",
-    "category": "一般过去时"
+    "answer": "work",
+    "tip": "every day 表示习惯，主语 I 用原形 work",
+    "category": "一般现在时"
   },
   {
     "sentence": "He ____ in a hospital.",
     "blank": "____",
     "options": ["worked", "work", "works", "working"],
-    "answer": "worked",
-    "tip": "work 的过去式是 worked",
-    "category": "一般过去时"
+    "answer": "works",
+    "tip": "主语 he（第三人称单数）用 works",
+    "category": "一般现在时"
   },
   {
     "sentence": "What ____ she drive?",
     "blank": "____",
     "options": ["did", "does", "do", "doing"],
-    "answer": "did",
-    "tip": "一般过去时疑问句用 did",
-    "category": "一般过去时"
+    "answer": "does",
+    "tip": "问现在习惯用 does",
+    "category": "一般现在时"
   },
   {
     "sentence": "What music ____ he play?",
     "blank": "____",
     "options": ["did", "does", "do", "doing"],
-    "answer": "did",
-    "tip": "一般过去时疑问句用 did",
-    "category": "一般过去时"
+    "answer": "does",
+    "tip": "问现在习惯用 does",
+    "category": "一般现在时"
   },
   {
     "sentence": "What ____ they do ten years ago?",
@@ -267,12 +267,12 @@
     "sentence": "Where ____ he work?",
     "blank": "____",
     "options": ["did", "does", "do", "doing"],
-    "answer": "did",
-    "tip": "一般过去时疑问句用 did",
-    "category": "一般过去时"
+    "answer": "does",
+    "tip": "问现在习惯用 does",
+    "category": "一般现在时"
   },
   {
-    "sentence": "He ____ fishing.",
+    "sentence": " Look,He ____ fishing.",
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "is",
@@ -318,5 +318,189 @@
     "answer": "plays",
     "tip": "第三人称单数动词加 s",
     "category": "一般现在时"
+  },
+  {
+    "sentence": "Daming usually ____ meat, vegetables and rice for dinner.",
+    "blank": "____",
+    "options": ["has", "have", "had", "having"],
+    "answer": "has",
+    "tip": "主语 Daming（第三人称单数）用 has 表示习惯。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "In the UK, people usually ____ breakfast at 7 o'clock.",
+    "blank": "____",
+    "options": ["has", "have", "had", "having"],
+    "answer": "have",
+    "tip": "主语 people（复数）用 have 表示习惯。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "Lunch ____ usually at half past twelve.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is",
+    "tip": "主语 Lunch（单数）用 is。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "Dinner ____ usually at half past six.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is",
+    "tip": "主语 Dinner（单数）用 is。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "Families usually ____ lunch together.",
+    "blank": "____",
+    "options": ["eat", "eats", "ate", "eating"],
+    "answer": "eat",
+    "tip": "主语 families（复数）用 eat。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "They ____ chicken, potatoes and other vegetables.",
+    "blank": "____",
+    "options": ["eat", "eats", "ate", "eating"],
+    "answer": "eat",
+    "tip": "主语 they（复数）用 eat。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "But today he ____ noodles and an egg.",
+    "blank": "____",
+    "options": ["has", "have", "had", "having"],
+    "answer": "has",
+    "tip": "主语 he（第三人称单数）用 has，today 表示现在。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "It ____ my birthday today.",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is",
+    "tip": "主语 It（单数）用 is，today 表示现在。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "She says it ____ delicious!",
+    "blank": "____",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is",
+    "tip": "主语 it（单数）用 is，say 后宾语从句用现在时。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "What ____ she have for breakfast?",
+    "blank": "____",
+    "options": ["did", "does", "do", "doing"],
+    "answer": "does",
+    "tip": "问现在习惯用 does",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "What ____ she have for dinner?",
+    "blank": "____",
+    "options": ["did", "does", "do", "doing"],
+    "answer": "does",
+    "tip": "问现在习惯用 does",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "What ____ you have for breakfast yesterday?",
+    "blank": "____",
+    "options": ["did", "does", "do", "doing"],
+    "answer": "did",
+    "tip": "yesterday 表示过去，问句用 did。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "She ____ eggs and sausages.",
+    "blank": "____",
+    "options": ["had", "has", "have", "having"],
+    "answer": "has",
+    "tip": "主语 she（第三人称单数）用 has",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "She ____ fish and chips.",
+    "blank": "____",
+    "options": ["had", "has", "have", "having"],
+    "answer": "has",
+    "tip": "主语 she（第三人称单数）用 has",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "She ____ sandwiches.",
+    "blank": "____",
+    "options": ["had", "has", "have", "having"],
+    "answer": "has",
+    "tip": "主语 she（第三人称单数）用 has",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "Yesterday she ____ an English breakfast.",
+    "blank": "____",
+    "options": ["had", "has", "have", "having"],
+    "answer": "had",
+    "tip": "yesterday 表示过去，用 had。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Feifei ____ apples and bread for breakfast yesterday.",
+    "blank": "____",
+    "options": ["had", "has", "have", "having"],
+    "answer": "had",
+    "tip": "yesterday 表示过去，用 had。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "When ____ Sam have breakfast?",
+    "blank": "____",
+    "options": ["does", "did", "do", "doing"],
+    "answer": "does",
+    "tip": "问现在习惯用 does。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "He ____ breakfast at 7.",
+    "blank": "____",
+    "options": ["has", "have", "had", "having"],
+    "answer": "has",
+    "tip": "主语 he（第三人称单数）用 has。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "What ____ he have for breakfast?",
+    "blank": "____",
+    "options": ["does", "did", "do", "doing"],
+    "answer": "does",
+    "tip": "问现在习惯用 does。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "He ____ eggs and sausages.",
+    "blank": "____",
+    "options": ["has", "have", "had", "having"],
+    "answer": "has",
+    "tip": "主语 he（第三人称单数）用 has。",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "I ____ ... (我吃了...)",
+    "blank": "____",
+    "options": ["had", "has", "have", "having"],
+    "answer": "have",
+    "tip": "主语 I 用 have",
+    "category": "一般现在时"
+  },
+  {
+    "sentence": "(Name) ____ (food) for breakfast yesterday.",
+    "blank": "____",
+    "options": ["had", "has", "have", "having"],
+    "answer": "had",
+    "tip": "yesterday 表示过去，用 had。",
+    "category": "一般过去时"
   }
 ]

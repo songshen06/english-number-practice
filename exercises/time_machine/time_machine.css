@@ -26,8 +26,7 @@ body {
 .gears {
   width: 48px;
   height: 48px;
-  background: url("https://cdn.jsdelivr.net/gh/iconoir-icons/svg/gear.svg")
-    no-repeat center/contain;
+  background: url("assets/gear.svg") no-repeat center/contain;
   animation: spin 2s linear infinite;
   margin-right: 18px;
 }
