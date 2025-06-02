@@ -233,11 +233,8 @@ window.onload = async () => {
   showTip(
     `讲习惯，说事实 (一般现在时):\n\n"天天做，常常有；he, she, it，动词后，S 要牵手。"\n\n过去事，已发生 (一般过去时):\n\n"昨天事，用过去；动词变身：或加 ed，或变特殊形态记！"\n\n现在正做，别忘记 (现在进行时):\n\n"眼前事，正发生；be 动词，加 ing。"`
   );
-  document.getElementById("close-tip").onclick = () => {
-    hideTip();
-    // 默认显示全部题目
-    startQuizByCategory(document.getElementById("category-select").value);
-  };
+  startQuizByCategory(document.getElementById("category-select").value);
+  document.getElementById("close-tip").onclick = hideTip;
   document.getElementById("category-select").onchange = function () {
     startQuizByCategory(this.value);
   };
