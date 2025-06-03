@@ -4,7 +4,7 @@
     "blank": "____",
     "options": ["send", "sends", "sent", "sending"],
     "answer": "sent",
-    "tip": "send 的 Simple Past 是 sent",
+    "tip": "send 的 一般过去时 是 sent",
     "category": "一般过去时"
   },
   {
@@ -12,7 +12,7 @@
     "blank": "____",
     "options": ["sent", "sends", "send", "sending"],
     "answer": "sends",
-    "tip": "send 的 Simple Present 是 sends",
+    "tip": "send 的 一般现在时 是 sends",
     "category": "一般现在时"
   },
   {
@@ -20,7 +20,7 @@
     "blank": "____",
     "options": ["ride", "rides", "riding", "rode"],
     "answer": "rode",
-    "tip": "ride 的 Simple Past 是 rode",
+    "tip": "ride 的 一般过去时 是 rode",
     "category": "一般过去时"
   },
   {
@@ -36,7 +36,7 @@
     "blank": "____",
     "options": ["rode", "riding", "ride", "rides"],
     "answer": "ride",
-    "tip": "ride 的 Simple Present 是 ride",
+    "tip": "ride 的 一般现在时 是 ride",
     "category": "一般现在时"
   },
   {
@@ -44,7 +44,7 @@
     "blank": "____",
     "options": ["fly", "flies", "flying", "flew"],
     "answer": "flew",
-    "tip": "fly 的 Simple Past 是 flew",
+    "tip": "fly 的 一般过去时 是 flew",
     "category": "一般过去时"
   },
   {
@@ -52,7 +52,7 @@
     "blank": "____",
     "options": ["flew", "flying", "fly", "flies"],
     "answer": "fly",
-    "tip": "fly 的 Simple Present 是 fly",
+    "tip": "fly 的 一般现在时 是 fly",
     "category": "一般现在时"
   },
   {
@@ -60,7 +60,7 @@
     "blank": "____",
     "options": ["get", "gets", "getting", "got"],
     "answer": "got",
-    "tip": "get 的 Simple Past 是 got",
+    "tip": "get 的 一般过去时 是 got",
     "category": "一般过去时"
   },
   {
@@ -68,7 +68,7 @@
     "blank": "____",
     "options": ["got", "getting", "get", "gets"],
     "answer": "get",
-    "tip": "get 的 Simple Present 是 get",
+    "tip": "get 的 一般现在时 是 get",
     "category": "一般现在时"
   },
   {
@@ -76,7 +76,7 @@
     "blank": "____",
     "options": ["eat", "eats", "eating", "ate"],
     "answer": "ate",
-    "tip": "eat 的 Simple Past 是 ate",
+    "tip": "eat 的 一般过去时 是 ate",
     "category": "一般过去时"
   },
   {
@@ -84,7 +84,7 @@
     "blank": "____",
     "options": ["ate", "eating", "eat", "eats"],
     "answer": "eats",
-    "tip": "eat 的 Simple Present 是 eats",
+    "tip": "eat 的 一般现在时 是 eats",
     "category": "一般现在时"
   },
   {
@@ -92,7 +92,7 @@
     "blank": "____",
     "options": ["read /riːd/", "reads /riːdz/", "reading", "read /rɛd/"],
     "answer": "read /rɛd/",
-    "tip": "read 的 Simple Past 是 read /rɛd/ (Correct form 'read' pronounced /rɛd/.)",
+    "tip": "read 的 一般过去时 是 read /rɛd/ (Correct form 'read' pronounced /rɛd/.)",
     "category": "一般过去时"
   },
   {
@@ -100,7 +100,7 @@
     "blank": "____",
     "options": ["read /rɛd/", "reads /riːdz/", "reading", "read /riːd/"],
     "answer": "reads /riːdz/",
-    "tip": "read 的 Simple Present 是 reads /riːdz/ (Correct form 'reads' pronounced /riːdz/.)",
+    "tip": "read 的 一般现在时 是 reads /riːdz/ (Correct form 'reads' pronounced /riːdz/.)",
     "category": "一般现在时"
   },
   {
@@ -108,7 +108,7 @@
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "was",
-    "tip": "be 的 Simple Past 是 was",
+    "tip": "be 的 一般过去时 是 was",
     "category": "一般过去时"
   },
   {
@@ -116,7 +116,7 @@
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "is",
-    "tip": "be 的 Simple Present 是 is",
+    "tip": "be 的 一般现在时 是 is",
     "category": "一般现在时"
   },
   {
@@ -124,7 +124,7 @@
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "were",
-    "tip": "be 的 Simple Past 是 were",
+    "tip": "be 的 一般过去时 是 were",
     "category": "一般过去时"
   },
   {
@@ -132,7 +132,7 @@
     "blank": "____",
     "options": ["is", "are", "was", "were"],
     "answer": "is",
-    "tip": "be 的 Simple Present 是 is",
+    "tip": "be 的 一般现在时 是 is",
     "category": "一般现在时"
   },
   {
@@ -502,5 +502,133 @@
     "answer": "had",
     "tip": "yesterday 表示过去，用 had。",
     "category": "一般过去时"
+  },
+  {
+    "sentence": "Did you ride the bike?",
+    "blank": "____",
+    "options": ["Did", "Do", "Does", "Will"],
+    "answer": "Did",
+    "tip": "一般过去时疑问句用 Did 开头。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Did you fly the kite?",
+    "blank": "____",
+    "options": ["Did", "Do", "Does", "Will"],
+    "answer": "Did",
+    "tip": "一般过去时疑问句用 Did 开头。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Did you read them?",
+    "blank": "____",
+    "options": ["Did", "Do", "Does", "Will"],
+    "answer": "Did",
+    "tip": "一般过去时疑问句用 Did 开头。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Did you ____ your homework yesterday?",
+    "blank": "____",
+    "options": ["do", "did", "does", "doing"],
+    "answer": "do",
+    "tip": "用 did 提问，后面动词用原形 do。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Did she ____ to school by bus?",
+    "blank": "____",
+    "options": ["go", "goes", "went", "going"],
+    "answer": "go",
+    "tip": "用 did 提问，后面动词用原形 go。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Did they ____ breakfast at 7 o'clock?",
+    "blank": "____",
+    "options": ["have", "has", "had", "having"],
+    "answer": "have",
+    "tip": "用 did 提问，后面动词用原形 have。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Did Tom ____ a kite in the park?",
+    "blank": "____",
+    "options": ["fly", "flew", "flies", "flying"],
+    "answer": "fly",
+    "tip": "用 did 提问，后面动词用原形 fly。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "Did your mother ____ a cake for you?",
+    "blank": "____",
+    "options": ["make", "makes", "made", "making"],
+    "answer": "make",
+    "tip": "用 did 提问，后面动词用原形 make。",
+    "category": "一般过去时"
+  },
+  {
+    "sentence": "We're ____ to see Stonehenge.",
+    "blank": "____",
+    "options": ["going", "go", "goes", "gone"],
+    "answer": "going",
+    "tip": "be going to + 动词原形，表示将来打算。",
+    "category": "一般将来时"
+  },
+  {
+    "sentence": "We'll ____ it tomorrow.",
+    "blank": "____",
+    "options": ["visit", "visits", "visited", "visiting"],
+    "answer": "visit",
+    "tip": "will + 动词原形，tomorrow 是将来时间词。",
+    "category": "一般将来时"
+  },
+  {
+    "sentence": "What will we ____ there?",
+    "blank": "____",
+    "options": ["see", "saw", "seeing", "seen"],
+    "answer": "see",
+    "tip": "will + 动词原形。",
+    "category": "一般将来时"
+  },
+  {
+    "sentence": "We'll ____ lots of very big stones.",
+    "blank": "____",
+    "options": ["see", "saw", "seeing", "seen"],
+    "answer": "see",
+    "tip": "will + 动词原形。",
+    "category": "一般将来时"
+  },
+  {
+    "sentence": "How will we ____ there?",
+    "blank": "____",
+    "options": ["get", "got", "gets", "getting"],
+    "answer": "get",
+    "tip": "will + 动词原形。",
+    "category": "一般将来时"
+  },
+  {
+    "sentence": "It will ____ three hours.",
+    "blank": "____",
+    "options": ["take", "takes", "took", "taking"],
+    "answer": "take",
+    "tip": "will + 动词原形。",
+    "category": "一般将来时"
+  },
+  {
+    "sentence": "What will Lingling and Amy ____ on Saturday?",
+    "blank": "____",
+    "options": ["do", "does", "did", "doing"],
+    "answer": "do",
+    "tip": "will + 动词原形，on Saturday 是将来时间词。",
+    "category": "一般将来时"
+  },
+  {
+    "sentence": "They'll ____ . (他们将...)",
+    "blank": "____",
+    "options": ["do", "does", "did", "doing"],
+    "answer": "do",
+    "tip": "They'll = They will，will + 动词原形。",
+    "category": "一般将来时"
   }
 ]
